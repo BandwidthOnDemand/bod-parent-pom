@@ -55,20 +55,15 @@
     </pluginRepositories>
 
     <distributionManagement>
-        <!--repository>
-            <id>surfnet-releases</id>
-            <name>surfnet-releases</name>
-            <url>http://atlas.dlp.surfnet.nl/nexus/content/repositories/releases</url>
-        </repository-->
         <repository>
             <id>surfnet-public-releases</id>
             <name>surfnet-public-releases</name>
             <url>http://atlas.dlp.surfnet.nl/nexus/content/repositories/public-releases</url>
         </repository>
         <snapshotRepository>
-            <id>surfnet-snapshots</id>
+            <id>surfnet-public-snapshots</id>
             <name>surfnet-snapshots</name>
-            <url>http://atlas.dlp.surfnet.nl/nexus/content/repositories/snapshots</url>
+            <url>http://atlas.dlp.surfnet.nl/nexus/content/repositories/public-snapshots</url>
         </snapshotRepository>
     </distributionManagement>
 
@@ -94,7 +89,7 @@
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>2.5.1</version>
+                <version>3.0</version>
                 <configuration>
                     <source>1.7</source>
                     <target>1.7</target>
@@ -108,6 +103,16 @@
                 <configuration>
                     <encoding>${project.build.resourceEncoding}</encoding>
                 </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.10</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-failsafe-plugin</artifactId>
+                <version>2.12</version>
             </plugin>
             <plugin>
                 <artifactId>maven-release-plugin</artifactId>
@@ -127,6 +132,11 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-deploy-plugin</artifactId>
                 <version>2.7</version>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>build-helper-maven-plugin</artifactId>
+                <version>1.7</version>
             </plugin>
         </plugins>
     </build>
@@ -148,15 +158,9 @@
             </dependency>
             <dependency>
                 <groupId>junit</groupId>
-                <artifactId>junit-dep</artifactId>
+                <artifactId>junit</artifactId>
                 <version>4.11</version>
                 <scope>test</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.hamcrest</groupId>
-                        <artifactId>hamcrest-core</artifactId>
-                    </exclusion>
-                </exclusions>
             </dependency>
             <dependency>
                 <groupId>org.mockito</groupId>
