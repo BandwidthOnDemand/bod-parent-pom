@@ -14,7 +14,9 @@
     </organization>
 
     <scm>
-        <developerConnection>scm:git:git:git@github.com:BandwidthOnDemand/bod-parent-pom.git</developerConnection>
+        <developerConnection>scm:git:git@github.com:BandwidthOnDemand/bod-parent-pom.git</developerConnection>
+        <connection>scm:git:git@github.com:BandwidthOnDemand/bod-parent-pom.git</connection>
+        <url>https://github.com/BandwidthOnDemand/bod-parent-pom</url>
     </scm>
 
     <properties>
