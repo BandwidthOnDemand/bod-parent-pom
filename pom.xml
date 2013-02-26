@@ -165,6 +165,12 @@
             </dependency>
 
             <dependency>
+                <groupId>joda-time</groupId>
+                <artifactId>joda-time</artifactId>
+                <version>2.1</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.apache.axis2</groupId>
                 <artifactId>axis2</artifactId>
                 <version>${axis2.version}</version>
