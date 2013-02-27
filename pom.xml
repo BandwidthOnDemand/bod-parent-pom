@@ -4,7 +4,7 @@
     <groupId>nl.surfnet.bod</groupId>
     <artifactId>bod-parent-pom</artifactId>
     <packaging>pom</packaging>
-    <version>0.1.2</version>
+    <version>0.1.3-SNAPSHOT</version>
     <name>Bandwidth on Demand Parent POM</name>
     <description />
 
@@ -17,7 +17,7 @@
         <developerConnection>scm:git:git@github.com:BandwidthOnDemand/bod-parent-pom.git</developerConnection>
         <connection>scm:git:git@github.com:BandwidthOnDemand/bod-parent-pom.git</connection>
         <url>https://github.com/BandwidthOnDemand/bod-parent-pom</url>
-      <tag>bod-parent-pom-0.1.2</tag>
+      <tag>HEAD</tag>
   </scm>
 
     <properties>
